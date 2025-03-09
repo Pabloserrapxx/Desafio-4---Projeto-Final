@@ -1,0 +1,58 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    container_name: dentran_db
+    environment:
+      MYSQL_ROOT_PASSWORD: Abacaxi741*
+      MYSQL_DATABASE: Dentran
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+        test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: development
+    container_name: dentran_api
+    ports:
+      - "3333:3333"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "run", "dev"]
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: dentran_frontend
+    ports:
+       - "0.0.0.0:5173:5173"
+    depends_on:
+      - api
+    volumes:
+      - ./frontend/src:/app/src:ro
+      - ./frontend/public:/app/public:ro
+      - /app/node_modules
+    environment:
+        - REACT_APP_API_URL=http://api:3333
+    command: ["npm", "run", "dev", "--", "--host"]
+
+
+volumes:
+  db_data:
+ 
