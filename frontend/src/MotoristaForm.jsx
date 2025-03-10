@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 const MotoristaForm = () => {
     const [nome, setNome] = useState('');
     const [cpf, setCpf] = useState('');
-    const [pontuacao, setPontuacao] = useState(''); // Campo pontuacao
-    const [data_nascimento, setDataNascimento] = useState(''); // Campo data_nascimento
+    const [data_nascimento, setDataNascimento] = useState(''); // Mantém data de nascimento
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const motoristaData = { nome, cpf, pontuacao, data_nascimento };
+        // A pontuação NÃO é mais incluída aqui
+        const motoristaData = { nome, cpf, data_nascimento };
 
         const response = await fetch('http://localhost:3333/motoristas', {
             method: 'POST',
@@ -23,10 +23,9 @@ const MotoristaForm = () => {
             alert('Motorista cadastrado com sucesso!');
             setNome('');
             setCpf('');
-            setPontuacao('');
             setDataNascimento('');
         } else {
-            const errorData = await response.json(); // Obter detalhes do erro
+            const errorData = await response.json();
             alert(`Erro ao cadastrar motorista: ${errorData.message || 'Erro desconhecido'}`);
         }
     };
@@ -41,10 +40,6 @@ const MotoristaForm = () => {
             <label>
                 CPF:
                 <input type="text" value={cpf} onChange={(e) => setCpf(e.target.value)} required />
-            </label><br />
-            <label>
-                Pontuação:
-                <input type="number" value={pontuacao} onChange={(e) => setPontuacao(e.target.value)} />
             </label><br />
             <label>
                 Data de Nascimento:

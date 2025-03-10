@@ -7,7 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: Abacaxi741*
       MYSQL_DATABASE: Dentran
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
