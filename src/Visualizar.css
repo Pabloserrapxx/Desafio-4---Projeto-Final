@@ -1,0 +1,192 @@
+.multas-icon {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.veiculo-icon {
+    color: rgb(48, 180, 70);
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.multas-icon:hover, .veiculo-icon:hover {
+    transform: scale(1.2);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.close-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centraliza a tabela */
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center; /* Centraliza o texto nas células */
+    vertical-align: middle; 
+    background-color: #fff;
+    word-wrap: break-word;
+}
+
+.data-table th {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .container {
+        padding: 15px;
+    }
+
+    .data-table th, .data-table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .action-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .data-table th, .data-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .data-table th, .data-table td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .close-icon {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 450px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .action-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .data-table th, .data-table td {
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    .close-icon {
+        align-self: flex-end;
+    }
+}

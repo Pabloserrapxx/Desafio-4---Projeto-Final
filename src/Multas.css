@@ -1,0 +1,135 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.logo {
+  width: 150px;
+}
+
+.close-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form-multa {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cadastrar-multa {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cadastrar-multa label {
+  font-weight: bold;
+}
+
+.cadastrar-multa input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cadastrar-multa button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cadastrar-multa button:hover {
+  background-color: #333;
+}
+
+.table-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+
+.data-table th, .data-table td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #000;
+  color: #fff;
+}
+
+.data-table td {
+  background-color: #f9f9f9;
+}
+
+.buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .data-table th, .data-table td {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .button {
+      padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+      width: 100%;
+  }
+
+  .data-table th, .data-table td {
+      font-size: 10px;
+      padding: 6px;
+  }
+
+  .button {
+      padding: 6px 12px;
+  }
+}

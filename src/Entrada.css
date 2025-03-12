@@ -1,0 +1,112 @@
+/* Fundo com gradiente mais sofisticado */
+.entrada-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #002a80, #0044cc, #00a2ff);
+  background-size: 200% 200%;
+  animation: gradientMove 6s ease infinite;
+}
+
+/* Animação do gradiente */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Cartão centralizado */
+.entrada-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Logo */
+.detran-logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Título */
+.titulo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0044cc;
+  margin-bottom: 10px;
+}
+
+/* Descrição */
+.descricao {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Botões */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Cores diferenciadas para os botões */
+.cadastrar {
+  background-color: #28a745;
+  color: white;
+}
+
+.visualizar {
+  background-color: #0044cc;
+  color: white;
+}
+
+/* Efeitos de hover */
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .entrada-card {
+    padding: 30px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

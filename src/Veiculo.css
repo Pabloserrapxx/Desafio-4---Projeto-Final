@@ -1,0 +1,103 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  width: 140px;
+}
+
+.fines-table-container {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto; /* Adiciona rolagem horizontal caso necessário */
+}
+
+.fines-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  margin: 0 auto; /* Centraliza a tabela */
+}
+
+.fines-table th, 
+.fines-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.fines-table th {
+  background-color: #0044cc;
+  color: #fff;
+  font-weight: bold;
+}
+
+.fines-table td {
+  background-color: #f9f9f9;
+}
+
+.back-button {
+  background-color: #0044cc;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #0033a0;
+  transform: scale(1.05);
+}
+
+.back-button:active {
+  background-color: #002a80;
+  transform: scale(0.95);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .fines-table th, 
+  .fines-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .back-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .fines-table th, 
+  .fines-table td {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .back-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
