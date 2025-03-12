@@ -115,3 +115,71 @@ export function handleGetMotoristasComPontuacao(request, response) {
         response.end(JSON.stringify(results));
     });
 }
+
+export function handleDeleteMotorista(request, response, id) {
+    const query = 'DELETE FROM motorista WHERE id_motorista = ?';
+    conexão.query(query, [id], (err, result) => {
+        if (err) {
+            console.error("Erro ao excluir motorista:", err);
+            response.statusCode = 500;
+            response.setHeader('Content-Type', 'application/json');
+            response.end(JSON.stringify({ message: 'Erro ao excluir motorista' }));
+            return;
+        }
+
+        if (result.affectedRows === 0) {
+            response.statusCode = 404; // 404 Not Found
+             response.setHeader('Content-Type', 'application/json');
+            response.end(JSON.stringify({ message: 'Motorista não encontrado' }));
+            return;
+        }
+
+        response.statusCode = 200; // 200 OK
+        response.setHeader('Content-Type', 'application/json');
+        response.end(JSON.stringify({ message: 'Motorista excluído com sucesso' }));
+    });
+}
+
+export function handleUpdateMotorista(request, response, id, data){
+    const {nome, cpf, data_nascimento} = data;
+    const query = 'UPDATE motorista SET nome = ?, cpf = ?, data_nascimento = ? WHERE id_motorista = ?';
+    conexão.query(query, [nome, cpf, data_nascimento, id], (err, result) => {
+        if(err){
+            console.error("Erro ao atualizar Motorista", err);
+            response.statusCode = 500;
+            response.setHeader('Content-Type', 'application/json');
+            response.end(JSON.stringify({message: "Erro ao atualizar motorista"}))
+            return;
+        }
+
+        if(result.affectedRows === 0){
+            response.statusCode = 404; // 404 Not Found
+             response.setHeader('Content-Type', 'application/json');
+            response.end(JSON.stringify({message: "Motorista não encontrado"}));
+            return;
+        }
+
+        response.statusCode = 200; // 200 OK
+        response.setHeader('Content-Type', 'application/json');
+        response.end(JSON.stringify({message: "Motorista atualizado com sucesso!"}));
+    })
+}   
+
+export function handleGetAllVeiculos(request, response) {
+    const query = 'SELECT * FROM veiculo';
+    conexão.query(query, (err, results) => {
+        if (err) {
+            console.error("Erro ao consultar todos os veículos:", err);
+            response.statusCode = 500; // Correct: Use statusCode
+            response.setHeader('Content-Type', 'application/json'); // Correct: Set header
+            response.end(JSON.stringify({ message: 'Erro ao consultar veículos' })); //Correct
+            return;
+        }
+        response.statusCode = 200; // Correct: Use statusCode
+        response.setHeader('Content-Type', 'application/json'); // Correct: Set header
+        response.end(JSON.stringify(results)); // Correct: Send JSON and end response
+    });
+}
+
+
+

@@ -1,42 +1,199 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* src/App.css - MANTIDO O MESMO CSS DE ANTES */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: sans-serif; /* Fonte mais moderna */
+}
+
+.sidebar {
+  width: 250px; /* Largura um pouco maior para acomodar o texto */
+  background-color: #334756;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Itens da barra lateral em coluna */
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  margin-bottom: 30px; /* Espaço entre o logo e os links */
+    width: 180px;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo img {
+  width: 100%; /* O logo ocupa toda a largura disponível */
+  height: auto; /* Mantém a proporção */
+  display: block; /* Remove espaçamento extra abaixo da imagem */
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
 }
 
-.card {
-  padding: 2em;
+.sidebar li {
+  margin-bottom: 15px; /* Mais espaço entre os itens */
 }
 
-.read-the-docs {
-  color: #888;
+.sidebar a {
+  display: flex; /* Para alinhar ícone e texto */
+  align-items: center; /* Centraliza verticalmente */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+   /* Cantos arredondados */
+  transition: background-color 0.3s ease;
+  font-size: 1.1em; /* Tamanho de fonte ligeiramente maior */
+
+}
+
+.sidebar a span:first-child {
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+  font-size: 1.3em; /* Ícone um pouco maior */
+}
+
+
+.sidebar a:hover {
+  background-color: #425a6d;
+  border-radius: 5px; /* Adicione o border-radius no hover também */
+
+}
+
+.sidebar a.active {
+  background-color: #283741;
+  font-weight: bold;
+  border-radius: 5px; /* E no estado ativo */
+}
+
+/*sair*/
+.sidebar .sair{
+    margin-top: 250px;
+}
+
+/*ajuda*/
+.sidebar .ajuda span{
+    font-size: 12px;
+
+}
+.sidebar .ajuda{
+   margin-top: 15px;
+
+}
+
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9f9f9; /* Fundo mais claro */
+}
+
+
+/* Estilos para a Home (HomeContent) */
+
+.home-content {
+    background-color: #fff; /* Fundo branco para o conteúdo principal */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+.home-content h1 {
+    color: #333;
+    font-size: 2em; /* Título maior */
+    margin-bottom: 0.5em;
+}
+
+.home-content p {
+    color: #666;
+    margin-bottom: 1.5em;
+}
+
+/* Botões */
+.button-container {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+    margin-bottom: 20px;
+}
+.inserir-button, .search-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.inserir-button {
+    background-color: #e2803f; /* Laranja */
+    color: white;
+}
+
+.search-button {
+    background-color: #ddd; /* Cinza claro */
+    color: #333;
+     width: 50px;
+}
+
+/* Filtro */
+.filter-container {
+    margin-bottom: 20px;
+}
+
+.filter-container label {
+    margin-right: 10px;
+}
+.filter-container select{
+   width: 200px;
+    padding: 5px;
+
+}
+
+/* Tabela */
+.home-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.home-content th, .home-content td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.home-content th {
+    background-color: #f0f0f0; /* Cabeçalho com fundo cinza claro */
+    font-weight: bold;
+}
+
+.home-content td:last-child { /* Coluna de ações */
+    text-align: right;
+}
+.home-content h2{
+    margin-top: 25px;
+
+}
+
+/* Botões de ação na tabela */
+.edit-button, .delete-button {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+.edit-button{
+   background-color: #f2945b;
+    color: #fff;
+
+}
+.delete-button {
+  background-color: #e74c3c; /* Vermelho */
+  color: white;
 }
