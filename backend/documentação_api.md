@@ -64,3 +64,28 @@
       }
     ]
     ```
+
+    - `GET /api/carro/<cpf_motorista>`
+
+  - Entrada: CPF do motorista
+  - Saída: Lista de carros do motorista
+
+    ```json
+    [
+      {
+        "placa": "ABC1000",
+        "modelo": "SUV",
+        "ano": 2015,
+      },
+      {
+        "placa": "ASD6084",
+        "modelo": "HATCH",
+        "ano": 2018,
+      },
+      {
+        "placa": "HFD7389",
+        "modelo": "SEDAN",
+        "ano": 2012,
+      }
+    ]
+    ```
