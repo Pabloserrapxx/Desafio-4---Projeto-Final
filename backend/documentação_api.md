@@ -29,7 +29,7 @@
     ```json
     {
       "valor": 293.47,
-      "data": "2020-01-01",
+      "data": "20-01-2021, 10:01",
       "pontuacaoNaCarteira": 4
       
     }
