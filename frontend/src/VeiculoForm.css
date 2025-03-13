@@ -1,0 +1,115 @@
+
+
+.veiculo-form-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.cadastrar-button {
+  background-color: #e67e22;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.cadastrar-button:hover {
+  background-color: #d35400;
+}
+
+.consulta-lista-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.consulta-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.consulta-container label {
+margin-right: 0.5rem;
+}
+
+.search-button {
+padding: 10px 15px;
+border: none;
+border-radius: 4px;
+background-color: #ddd;
+cursor: pointer;
+font-size: 16px;
+}
+
+.search-button:hover{
+  background-color: #ccc;
+}
+
+.lista-veiculos table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.lista-veiculos th,
+.lista-veiculos td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.lista-veiculos th {
+  background-color: #f2f2f2;
+}
+.erro-message{
+  color: red;
+}
