@@ -3,9 +3,9 @@
   - Entrada: Dados do motorista
     ```json
     {
-      "cpf": "000.000.000-00",
+      "cpf": "00000000000",
       "nome": "Fulano",
-      "data_nascimento": "2025-12-15",
+      "data_nascimento": "08-12-2001",
       "pontuacao": "0"
     }
     ```
@@ -45,21 +45,21 @@
     ```json
     [
       {
-        "cpf": "000.000.000-00",
+        "cpf": "00000000000",
         "nome": "Fulano",
-        "data_nascimento": "2025-12-15",
+        "data_nascimento": "25-09-2002",
         "pontuacao": "0"
       },
       {
-        "cpf": "030.500.343-83",
+        "cpf": "03050034383",
         "nome": "Beltrano",
-        "data_nascimento": "2023-11-14",
+        "data_nascimento": "22-11-2001",
         "pontuacao": "4"
       },
       {
         "cpf": "001.051.300-00",
         "nome": "Joãozinho",
-        "data_nascimento": "2027-07-16",
+        "data_nascimento": "02-07-2004",
         "pontuacao": "0"
       }
     ]
