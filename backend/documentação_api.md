@@ -3,10 +3,10 @@
   - Entrada: Dados do motorista
     ```json
     {
-      "cpf": "00000000000",
+      "cpf": "000.000.000-00",
       "nome": "Fulano",
       "data_nascimento": "2025-12-15",
-      "pontuacao": "4"
+      "pontuacao": "0"
     }
     ```
   - Saída: (nenhuma)
@@ -18,7 +18,7 @@
     {
       "placa": "ABC-1AVD",
       "modelo": "Focus",
-      "ano": 2015,
+      "ano": 2015
     }
     ```
   - Saída: (nenhuma)
@@ -30,7 +30,7 @@
     {
       "valor": 293.47,
       "data": "2020-01-01",
-      "pontuacaoNaCarteira": 4,
+      "pontuacaoNaCarteira": 4
       
     }
     ```
