@@ -89,3 +89,34 @@
       }
     ]
     ```
+
+    
+- `GET /api/multa/<cpf_motorista>`
+
+  - Entrada: CPF do motorista
+  - Saída: Lista de multas do motorista
+
+    ```json
+    [
+      {
+        "valor": 293.47,
+        "data": "02-01-2017",
+        "pontuacaoNaCarteira": 4,
+      },
+      {
+        "valor": 293.47,
+        "data": "01-03-2021",
+        "pontuacaoNaCarteira": 4,
+      },
+      {
+        "valor": 723.23,
+        "data": "19-09-2019",
+        "pontuacaoNaCarteira": 7,
+      },
+      {
+        "valor": 1467.35,
+        "data": "10-05-2021",
+        "pontuacaoNaCarteira": 12,
+      }
+    ]
+    ```
