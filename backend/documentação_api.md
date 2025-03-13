@@ -37,3 +37,30 @@
   - Saída: (nenhuma)
 
 -
+- `GET /api/motorista/ `
+
+  - Entrada: (nenhuma)
+  - Saída: Lista de motoristas
+
+    ```json
+    [
+      {
+        "cpf": "000.000.000-00",
+        "nome": "Fulano",
+        "data_nascimento": "2025-12-15",
+        "pontuacao": "0"
+      },
+      {
+        "cpf": "030.500.343-83",
+        "nome": "Beltrano",
+        "data_nascimento": "2023-11-14",
+        "pontuacao": "4"
+      },
+      {
+        "cpf": "001.051.300-00",
+        "nome": "Joãozinho",
+        "data_nascimento": "2027-07-16",
+        "pontuacao": "0"
+      }
+    ]
+    ```
